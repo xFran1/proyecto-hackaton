@@ -1,0 +1,416 @@
+---
+import portatil from '../assets/portatil.png';
+import foto001 from '../assets/foto001.jpg';
+
+
+
+---
+
+<style>
+main{
+    height: 90vh;
+    /* background-color: rgb(174, 174, 174); */
+    /* background-color: rgba(145, 145, 145, 0.199); */
+}
+
+
+    .experiencia{
+        animation: 1.5s animacion-experiencia ease-in-out;
+        transform: translateY(-20px);
+        opacity: 0;
+        animation-fill-mode: forwards;   
+     }
+
+    @keyframes animacion-experiencia {
+        from{
+
+        }
+       
+        to{
+            transform: translateY(0px);
+            opacity: 1;
+
+
+        }
+    }
+    .potenciando{
+        animation: 1.5s animacion-potenciando ease-in-out;
+        transform: translateX(-310px);
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes animacion-potenciando {
+        from{
+            
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+
+        }
+        
+    }
+
+    @keyframes mostrar-fecha{
+        from{
+            visibility: hidden;
+            opacity: 0;
+        }
+        to{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .futuro{
+        font-family: "Poppins";
+      position: relative;
+      font-weight: 700; /* Negrita */
+      letter-spacing: 0.2rem; /* Espaciado entre letras */
+      color: transparent; /* Relleno transparente */
+      -webkit-text-stroke: 2px white; /* Contorno blanco de 2px */
+      text-shadow: none; /* Elimina cualquier sombra que interfiera */
+      margin: 0;
+        animation: 1.5s animacion-potenciando ease-in-out;
+        transform: translateX(800px);
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes animacion-futuro {
+        from{
+            
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+
+        }
+        
+    }
+   
+    .circulo{
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background-color: #9c90bca1;
+        box-shadow: 0px 0px 80px #c36fff6d; /* Sombra negra suave */
+        opacity: 0;
+        right: 0;
+        border-radius: 100%;
+        animation: 1.5s animacion-circulo ease-in-out 2s forwards , tambalearse 5s ease-in-out infinite alternate 2s;
+    }
+    @keyframes animacion-circulo {
+    from {
+        opacity: 0;
+        transform: translateY(300px) translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) translateX(0);
+    }
+    }
+
+    
+
+@keyframes tambalearse {
+    from {
+        transform: translateY(0px) translateX(0px);
+    }
+    to {
+        transform: translateY(0px) translateX(-20px);
+    }
+}
+
+
+@keyframes animacion-portatil {
+    from {
+        opacity: 0;
+        transform: translateY(-300px) ;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) ;
+    }
+    }
+
+    .foto{
+        display: block;
+        
+        height: 187px;
+        width: 324px;
+        cursor: pointer;
+
+    }
+    .portatil{
+    position: absolute;
+    right: 6%;
+    width: 450px;
+    animation: 1.5s animacion-portatil ease-in-out forwards 2s;
+    opacity: 0;
+    transform: translateY(0px) ;
+    z-index: 0;
+    }
+
+    .cursor{
+        position: absolute;
+        top: 15px;
+        left: 63px;
+        height: 187px;
+        width: 350px;
+        z-index: 2;
+
+
+    }
+    .frase{
+        width: fit-content;
+    }
+    .foto-click{
+
+        visibility: hidden;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        background-color: rgba(105, 105, 105, 0.834);
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes animacion-foto-entrar{
+        from{
+            opacity: 0;
+            visibility: visible;
+
+        }
+
+        to{
+            opacity: 1; 
+            visibility: visible;
+           
+
+        }
+    }
+    @keyframes animacion-foto-salir{
+        from{
+            opacity: 1;
+            visibility: visible;
+
+        }
+
+        to{
+            opacity: 0; 
+            visibility: hidden;
+           
+
+        }
+    }
+
+
+
+    .foto-interior{
+        width: 66%;
+        height: 80%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .cruz{
+        right: 0;
+        top: 0;
+        color: rgb(237, 237, 237);
+        background-color: rgba(255, 23, 23, 0.582);
+        border-radius: 100%;
+        border: 1px solid rgb(69, 69, 69);
+        cursor: pointer;
+        
+    }
+    .time{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+    }
+    .time h2{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1;
+        margin: 0 0 5px;
+    }
+    .countdown{
+        animation: 3s mostrar-fecha ease-in-out;
+    }
+   
+</style>
+
+<main id="inicio" class="">
+    <div id="foto-click" class=" foto-click absolute h-full w-full z-20 flex justify-center items-center ">
+        <div class="foto-interior relative">
+            
+            <img id="foto-colocar" src="/src/assets/foto013.jpg"> 
+            <div id="cruz" class="cruz absolute w-8 m-2 h-8 flex justify-center items-center font-bold">X</div>
+        </div>
+    </div>
+    <div class="flex flex-col gap-5  h-full justify-center text-white relative">
+        <div class="circulo"></div>
+        <div id="portatil" class="portatil relative"><img src={ portatil.src }>
+            
+            <div class="cursor">
+                <img id="foto" class="foto" src={ foto001.src }>
+            </div>
+            
+        
+        </div>
+<div class="frase experiencia text-lg tracking-widest font-light text-green-200">UNA EXPERIENCIA ÚNICA</div>
+
+<div class="frase text-5xl font-bold flex gap-4 relative">
+    <span class="potenciando">Potenciando el  </span> 
+        <h1 class="futuro text-5xl flex items-center">Futuro Ahora</h1>
+   </div>
+    
+<div class="w-6/12 text-base">En una mañana llena de energía e inspiración, los estudiantes más brillantes de los 
+    centros educativos de Utrera se unen en un emocionante desafío. 
+    Impulsando la competitividad local con ideas innovadoras, 
+    para construir un futuro más sostenible. 🚀🌍
+</div>
+
+<div id="countdown" class="countdown flex w-6/12 mt-24 justify-center">
+
+    <div class="time">
+        <h2 id="days">
+            00
+        </h2>
+        <small>Días</small>
+    </div>
+    <div class="time">
+        <h2 id="hours">
+            00
+        </h2>
+        <small>Horas</small>
+    </div>
+    <div class="time">
+        <h2 id="minutes">
+            00
+        </h2>
+        <small>Minutos</small>
+    </div>
+    <div class="time">
+        <h2 id="seconds">
+            00
+        </h2>
+        <small>Segundos</small>
+    </div>
+
+</div>
+</div>
+
+
+
+
+</main>
+
+<script>
+
+    const days = document.getElementById('days')
+    const hours   =document.getElementById('hours')
+    const minutes =document.getElementById('minutes')
+    const seconds =document.getElementById('seconds')
+
+
+    const fechaEvento = new Date("April 10 2025 08:30:00");
+
+
+    function updateCountdown(){
+        const currentTime = new Date();
+        
+        const diff = fechaEvento.getTime() - currentTime.getTime();
+
+        const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+        const h = Math.floor(diff  /1000 / 60 / 60 ) % 24;
+        const m = Math.floor(diff / 1000 / 60 ) % 60;
+        const s = Math.floor(diff / 1000) % 60;
+
+        if(days ){
+            days.innerHTML = d.toString();
+
+        }
+        if(hours){
+            hours.innerHTML= (h < 10 ? '0' + h:h).toString();
+
+        }
+        if(minutes){
+            minutes.innerHTML = (m < 10 ? '0' + m:m).toString() ;
+
+        }
+        if(seconds){
+            seconds.innerHTML = (s < 10 ? '0' + s:s).toString();
+
+        }
+
+    }
+    setInterval(updateCountdown,1000);
+
+
+    let portatilfoto = document.getElementById('foto') as HTMLImageElement;
+
+    let images = [];
+    let imageNumber;
+    for (let i = 1; i <= 19; i++) {
+
+    if(i<10){
+        images.push('foto00'+i);
+
+    }else{
+        images.push('foto0'+i);
+
+    }
+    }   
+    
+    let fotocolocar = document.getElementById('foto-colocar') as HTMLImageElement;
+    let fotoclick = document.getElementById('foto-click')
+    portatilfoto.addEventListener("click",function(){
+        fotocolocar.src = portatilfoto.src
+        if(fotoclick){
+            console.log('entra')
+
+        // Reinicia la animación forzando un reflow
+        fotoclick.style.animation = "none";
+        void fotoclick.offsetWidth; // Forzar reflow para reiniciar animación
+        fotoclick.style.animation = "1s animacion-foto-entrar ease-in-out forwards";        
+    }
+        
+
+    })
+
+    let cruz = document.getElementById('cruz')
+
+    cruz?.addEventListener("click",function(){
+
+        if(fotoclick){
+            fotoclick.style.visibility="visible"
+            fotoclick.style.animation = "none";
+        void fotoclick.offsetWidth; // Forzar reflow para reiniciar animación
+        fotoclick.style.animation = "1s animacion-foto-salir ease-in-out forwards";  
+        }
+         
+
+
+
+    })
+
+    let currentImageIndex = 0;
+  // Cambiar la imagen cada 5 segundos
+  if(portatilfoto){
+
+      setInterval(() => {
+        currentImageIndex+=1
+        if(currentImageIndex>14){
+            currentImageIndex=0
+        }
+        portatilfoto.src = `/src/assets/${images[currentImageIndex]}.jpg`; 
+    }, 3500);
+    }
+
+</script>
+
