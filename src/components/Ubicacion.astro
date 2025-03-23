@@ -1,0 +1,65 @@
+---
+
+---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+<style>
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #B7F1CC;
+}
+@media screen and (max-width:736px){
+    
+    .letras{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width:1400px){
+    .columna{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .mapa{
+        justify-content: center;
+    }
+    
+}
+</style>
+<div class="reto titulo text-lg tracking-widest font-light text-green-200 mb-8 mt-20 py-12" id="ubicacion">
+    UBICACIÓN
+</div>
+<div class="flex d-flex w-full columna gap-10">
+
+    
+    <div class=" flex d-flex  mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.7060646295563!2d-5.784850223671529!3d37.183455772140334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd127f0e0109fb29%3A0x88b2225469c014ed!2sC.%20%C3%81lvarez%20Quintero%2C%2039%2C%2041710%20Utrera%2C%20Sevilla!5e0!3m2!1ses!2ses!4v1742755747156!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+    </div>
+    <div class="flex d-flex flex-col justify-center gap-4  mx-auto text-lg">
+        <div class="text-white flex d-flex">
+            <div class="icon me-2">
+                <i class="bi bi-geo-alt"></i>
+
+            </div>
+            <div>
+
+                <div>
+                    Biblioteca Municipal de Utrera
+                </div>
+                <div>
+                    C. Álvarez Quintero, 39, 41710 Utrera, Sevilla
+                </div>
+        </div>
+        </div>
+        <div class="text-white flex d-flex   items-center"><div class="icon me-2"><i class="bi bi-calendar"></i></div>
+            10 de abril de 2025</div>
+        <div class="text-white flex d-flex   items-center"><div class="icon me-2"><i class="bi bi-clock"></i></div> 08:30 a 15:00</div>
+        <div class="text-white text-xl">
+            <div class="letras">Innovación y creatividad se unen en este Hackatón.</div><div class="text-center text-2xl text-green-200"> ¡Desafía los límites!</div>
+        </div>
+    </div>
+</div>

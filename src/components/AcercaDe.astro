@@ -1,0 +1,152 @@
+---
+
+---
+
+<style>
+.reto {
+    visibility: hidden;
+    /* transform: translateY(50px); */
+}
+.show {
+    /* opacity: 0; */
+    /* transform: translateY(0); */
+    /* animation: none; */
+    animation: 1s mostrar1 ease-out forwards;
+   /* ,5s movimiento infinite 1s */
+}
+.titulo {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.mostrar {
+    opacity: 1;
+    transform: translateY(0);  
+}
+@keyframes mostrar1 {
+    from{
+        visibility: visible;
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
+
+        opacity: 1;
+
+    }
+}
+@keyframes movimiento {
+    from{
+        transform: translateX(0px) translateY(0px);
+    }
+    50%{
+        transform: translateX(5px) translateY(0px);
+
+    }
+    to{
+        transform: translateX(0px) translateY(0px);
+
+    }
+}
+
+</style>
+
+<!-- Acerca del evento -->
+
+
+
+<!-- FASES -->
+<article class="text-white mt-10" id="fases">
+    <div class="reto titulo text-lg tracking-widest font-light text-green-200 mb-24">
+        FASES
+     </div>
+    <!-- Primer artículo -->
+    <div class="reto" >
+        <div class="w-48"><img src="/src/assets/reto001.svg"></div>
+        <div class="w-56 text-left"><span class="text-xl">1.</span> Lanzamiento del reto</div>
+    </div>
+
+    <!-- Segundo artículo -->
+    <div class="flex flex-col items-end reto" >
+        <div class="w-48"><img src="/src/assets/reto002.svg"></div>
+        <div class="w-56 text-center"><span class="text-xl">2.</span> Ideación</div>
+    </div>
+
+   
+
+    <!-- Tercer artículo -->
+    <div class="reto" >
+        
+        <div class="w-48"><img src="/src/assets/reto003.svg"></div>
+        <div class="w-56 text-center"><span class="text-xl">3.</span> Prototipaje</div>
+    </div>
+    <!-- Cuarto artículo -->
+    
+
+    <div class="flex flex-col items-end reto" >
+
+        <div class=" flex  items-center flex-col">
+
+            <div class="w-48"><img src="/src/assets/reto004.svg"></div>
+            <div class="w-56 text-left"><span class="text-xl">4.</span> Preparar presentación</div>
+        </div>
+
+
+    </div>
+
+    
+    <!-- Quinto artículo -->
+    <div class="flex flex-col items-start reto" >
+
+        <div class=" flex  items-center flex-col">
+
+            <div class="w-48"><img src="/src/assets/reto005.svg"></div>
+            <div class="w-56 text-left"><span class="text-xl">5.</span> Presentación soluciones al reto</div>
+        </div>
+
+
+    </div>
+    <!-- Sexto artículo -->
+    <div class="flex flex-col items-end reto" >
+        <div class=" flex justify-center items-center flex-col">
+
+        <div class="w-48"><img src="/src/assets/reto006.svg"></div>
+        <div class="w-56 text-left"><span class="text-xl">6.</span> Selección equipo ganador por jurado</div>
+    </div>
+
+    </div>
+    <!-- Séptimo artículo -->
+    <div class="flex flex-col items-center reto" >
+        <div class=" flex justify-center items-center flex-col">
+        <div class="w-48"><img src="/src/assets/reto007.svg"></div>
+        <div class="w-56 text-left"><span class="text-xl">7.</span> Entrega de premios</div>
+    
+    </div>
+    </div>
+</article>
+
+<script>
+    
+   
+
+
+    const cards = document.querySelectorAll('.reto')
+
+    const observer = new IntersectionObserver(entries =>{
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("show")
+            }
+        });
+    }
+    ,
+    {
+        threshold:1,
+    })
+
+    cards.forEach(card => {
+        observer.observe(card)
+    });
+
+</script>

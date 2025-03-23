@@ -2,6 +2,11 @@
 import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
 import Inicio from '../components/Inicio.astro';
+import AcercaDe from '../components/AcercaDe.astro';
+import Faqs from '../components/Faqs.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import Sponsor from '../components/Sponsor.astro';
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -34,11 +39,13 @@ import Inicio from '../components/Inicio.astro';
 </style>
 
 <Layout>
-	 <div class=" w-11/12 sm:w-8/12 m-auto">
+	 <div class=" w-11/12 md:w-8/12 m-auto">
 		<Header /> 
 		<Inicio />
-		
-		
+		<AcercaDe />
+		<Faqs />
+		<Ubicacion />
+		<Sponsor />
 		
 		
 		

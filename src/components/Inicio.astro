@@ -8,7 +8,7 @@ import foto001 from '../assets/foto001.jpg';
 
 <style>
 main{
-    height: 90vh;
+    height: 100vh;
     /* background-color: rgb(174, 174, 174); */
     /* background-color: rgba(145, 145, 145, 0.199); */
 }
@@ -241,18 +241,81 @@ main{
     .countdown{
         animation: 3s mostrar-fecha ease-in-out;
     }
+    .gap-experiencia{
+        display: flex;
+        flex-direction: column;
+            gap: 40px;
+        }
+    
+    @media screen and (max-width:1796px){
+        .frase-interior{
+            flex-direction: column;
+        }
+        
+    }
+
+    @media screen and (max-width:1376px){
+        .frase-interior{
+            flex-direction: row;
+        }
+        .gap-experiencia{
+            gap: 15px;
+        }
+        .portatil{
+            position: static;
+            margin: 0 auto;
+        }
+        .gap-posterior{
+            flex-direction: column-reverse;
+        }
+        .sub-texto{
+            width: 100%;
+        }
+        .countdown{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+         .gap-experiencia{
+            margin-bottom: 12px;
+        }
+       
+
+    }
+    @media screen and (max-width:1200px){
+        .frase-interior{
+            flex-direction: column;
+        }
+         .foto-interior{
+        
+            width: 90%;
+            height: 65%;
+        }
+        
+    }
+    @media screen and (max-width:900px){
+        
+         .foto-interior{
+        
+            width: 90%;
+            height: 35%;
+        }
+        
+    }
    
 </style>
 
 <main id="inicio" class="">
-    <div id="foto-click" class=" foto-click absolute h-full w-full z-20 flex justify-center items-center ">
+    <div id="foto-click" class=" foto-click fixed h-full w-full z-20 flex justify-center items-center ">
         <div class="foto-interior relative">
             
             <img id="foto-colocar" src="/src/assets/foto013.jpg"> 
             <div id="cruz" class="cruz absolute w-8 m-2 h-8 flex justify-center items-center font-bold">X</div>
         </div>
     </div>
-    <div class="flex flex-col gap-5  h-full justify-center text-white relative">
+    <div class="gap-posterior flex flex-col  h-full justify-center text-white relative">
         <div class="circulo"></div>
         <div id="portatil" class="portatil relative"><img src={ portatil.src }>
             
@@ -262,17 +325,18 @@ main{
             
         
         </div>
+        <div class="gap-experiencia">
 <div class="frase experiencia text-lg tracking-widest font-light text-green-200">UNA EXPERIENCIA ÚNICA</div>
 
-<div class="frase text-5xl font-bold flex gap-4 relative">
+<div class="frase frase-interior text-5xl font-bold flex gap-4 relative">
     <span class="potenciando">Potenciando el  </span> 
         <h1 class="futuro text-5xl flex items-center">Futuro Ahora</h1>
    </div>
     
-<div class="w-6/12 text-base">En una mañana llena de energía e inspiración, los estudiantes más brillantes de los 
+<div class="sub-texto w-6/12 text-base ">En una mañana llena de energía, los estudiantes más brillantes de los 
     centros educativos de Utrera se unen en un emocionante desafío. 
     Impulsando la competitividad local con ideas innovadoras, 
-    para construir un futuro más sostenible. 🚀🌍
+    para construir un futuro sostenible. 🚀🌍
 </div>
 
 <div id="countdown" class="countdown flex w-6/12 mt-24 justify-center">
@@ -301,7 +365,7 @@ main{
         </h2>
         <small>Segundos</small>
     </div>
-
+</div>
 </div>
 </div>
 

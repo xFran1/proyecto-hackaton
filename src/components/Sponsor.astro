@@ -1,0 +1,104 @@
+---
+
+---
+
+<style>
+.imagen-sponsor{
+    
+}
+.colocar{
+    display: flex;
+}
+
+.organizan{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.participantes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.participantes .imagen-sponsor{
+    flex: 1 1 calc(33% - 10px);
+}
+.colaboradores{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.creador{
+    border: 1px solid rgba(110, 110, 110, 0.37);
+    border-right: none;
+    border-left: none;
+    font-size: 20px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    color: #BBF7D9;
+}
+
+@media screen and (max-width:936px){
+  
+.creador{
+    flex-direction: column;
+}
+.participantes .imagen-sponsor{
+    flex: 1 1 calc(50% - 10px);
+}
+.organizan{
+    grid-template-columns: 1fr;
+}
+}
+@media screen and (max-width:1400px){
+    .creador{
+    display: flex;
+    flex-direction: column;
+} 
+}
+</style>
+<div class="reto titulo text-lg tracking-widest font-light text-green-200 mb-8 mt-20 py-12" id="faqs">
+    GESTIONAN Y ORGANIZAN
+ </div>
+<article class="organizan">
+    <figure class="imagen-sponsor"><img style="height: 150px; width: 100%;" src="/src/assets/sponsor004.jpg"></figure>
+    <figure class="imagen-sponsor"><img style="height: 150px; width: 100%;" src="/src/assets/sponsor006.jpg"></figure>
+    <figure class="imagen-sponsor"><img style="height: 180px; width: 60%;margin: 0 auto; margin-top: 20px;" src="/src/assets/sponsor007.png"></figure>
+    <figure class="imagen-sponsor"><img style="height: 180px; width: 100%;margin: 0 auto; margin-top: 20px;" src="/src/assets/sponsor008.jpeg"></figure>
+</article>
+
+<div class="reto titulo text-lg tracking-widest font-light text-green-200 mb-8 mt-20 py-12" id="faqs">
+    PARTICIPANTES
+ </div>
+<article class="participantes colocar">
+    <figure class="imagen-sponsor"><img style="height: 220px; width: 100%; margin: 0 auto;" src="/src/assets/sponsor005.jpg"></figure>
+    <figure class="imagen-sponsor"><img style=" height: 220px; width: 100%;margin: 0 auto;" src="/src/assets/sponsor009.png"></figure>
+    <figure class="imagen-sponsor"><img style="height: 220px; width: 100%;" src="/src/assets/sponsor010.png"></figure>
+    <figure class="imagen-sponsor"><img style="height: 220px; width: 100%;" src="/src/assets/sponsor007.png"></figure>
+    <figure class="imagen-sponsor"><img style="height: 220px; width: 100%;" src="/src/assets/sponsor011.png"></figure>
+</article>
+
+<div class="reto titulo text-lg tracking-widest font-light text-green-200 mb-8 mt-20 py-12" id="faqs">
+    COLABORADORES
+ </div>
+<article class="colaboradores colocar">
+    <figure class="imagen-sponsor"><img style="height: 240px; width: 100%;" src="/src/assets/sponsor001.jpg"></figure>
+    <figure class="imagen-sponsor"><img style="height: 240px; width: 100%; margin: 0 auto; background-color: red;" src="/src/assets/sponsor003.jpg"></figure>
+</article>
+
+<div class="text-center mt-20 fs-lg creador">
+    <div>
+        WEB REALIZADA POR
+        </div>
+        <div>
+            FRANCISCO JAVIER RUBIO RUBIO </div>
+            <div>2º DAW IES RUIZ GIJÓN 2025</div>  
+
+
+</div>
+
+<div class="pb-2"></div>
+
+
+
+
+
