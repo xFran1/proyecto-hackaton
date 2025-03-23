@@ -1,6 +1,6 @@
 ---
-import portatil from '../assets/portatil.png';
-import foto001 from '../assets/foto001.jpg';
+import portatil from '/public/assets/portatil.png';
+import foto001 from '/public/assets/foto001.jpg';
 
 
 
@@ -472,7 +472,7 @@ main{
         if(currentImageIndex>14){
             currentImageIndex=0
         }
-        portatilfoto.src = `/src/assets/${images[currentImageIndex]}.jpg`; 
+        portatilfoto.src = `/public/assets/${images[currentImageIndex]}.jpg`; 
     }, 3500);
     }
 
